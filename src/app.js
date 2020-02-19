@@ -5,6 +5,8 @@ const app = express();
 
 app.set('port', process.env.PORT || 4000);
 
+app.disable('x-powered-by');
+
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.get('/search', (req, res) => {
