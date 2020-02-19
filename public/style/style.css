@@ -46,3 +46,23 @@ font-weight: bolder;
 .news .news-date{
 text-align: right;}
 
+
+
+
+/* Erorr pages */
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 150px;
+}
+
+.error__desc {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.error__msg {
+  color: #999;
+}
