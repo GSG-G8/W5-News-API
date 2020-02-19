@@ -19,8 +19,8 @@ app.post('/search', (req, res) => {
   const data = req.body.value;
   const url = `http://newsapi.org/v2/everything?q=${data}&apiKey=${process.env.apiKey}`;
   fetch(url)
-    .then(res => res.json())
-    .then(body => res.json(body.articles));
+    .then((reso) => reso.json())
+    .then((body) => res.json(body.articles));
 });
 
 app.use((err, req, res, next) => {

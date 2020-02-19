@@ -6,5 +6,5 @@ const fetching = (data) => {
     },
     body: JSON.stringify(data),
   }).then((res) => res.json())
-    .then((res) => console.log(res));
+    .then((res) => creatNews(res));
 };
