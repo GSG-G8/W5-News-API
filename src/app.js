@@ -1,8 +1,9 @@
 const express = require('express');
 const path = require('path');
+require('dotenv').config();
 
 const app = express();
-
+const fetch = require('node-fetch');
 app.use(express.json());
 app.set('port', process.env.PORT || 4000);
 
@@ -11,7 +12,15 @@ app.disable('x-powered-by');
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.get('/search', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'public', 'search.html'));
+  res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
+});
+
+app.post('/search', (req, res) => {
+  const data = req.body.value;
+  const url = `http://newsapi.org/v2/everything?q=${data}&apiKey=${process.env.apiKey}`;
+  fetch(url)
+    .then(res => res.json())
+    .then(body => res.json(body.articles[0]));
 });
 
 app.post('/search', (req, res) => {
