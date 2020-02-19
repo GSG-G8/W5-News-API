@@ -40,7 +40,7 @@ const HideNews = () => {
 
 searchBtn.addEventListener('click', () => {
   const value = userInput.value;
-  if (value === '' || value.startsWith(' ')) {
+  if (value === '' || (value.startsWith(' ') && value.endsWith(' '))) {
     eror.textContent = 'Insert Data and search again';
   } else {
     eror.textContent = '';
