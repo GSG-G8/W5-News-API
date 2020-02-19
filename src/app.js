@@ -23,6 +23,11 @@ app.post('/search', (req, res) => {
     .then(body => res.json(body.articles[0]));
 });
 
+app.post('/search', (req, res) => {
+  console.log('Helllo', req.body.value);
+  res.json(`hello ${req.body.value}`);
+});
+
 app.use((err, req, res, next) => {
   res
     .status(500)
