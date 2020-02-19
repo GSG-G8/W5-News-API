@@ -2,9 +2,8 @@ const userInput = document.querySelector('#search-bar');
 
 const searchBtn = document.querySelector('#search-btn');
 
+
 const fetching = (data) => {
-
-
   return fetch('/search', {
     method: 'POST',
     headers: {
@@ -14,7 +13,6 @@ const fetching = (data) => {
   }).then((res) => res.json())
     .then((res) => console.log(res));
 };
-
 
 searchBtn.addEventListener('click', () => {
   const data = { value: userInput.value };
