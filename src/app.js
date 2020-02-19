@@ -3,6 +3,7 @@ const path = require('path');
 
 const app = express();
 
+app.use(express.json());
 app.set('port', process.env.PORT || 4000);
 
 app.disable('x-powered-by');
@@ -11,6 +12,11 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.get('/search', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'search.html'));
+});
+
+app.post('/search', (req, res) => {
+  console.log('Helllo', req.body.value);
+  res.json(`hello ${req.body.value}`);
 });
 
 app.use((err, req, res, next) => {
