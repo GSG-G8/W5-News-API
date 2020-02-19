@@ -4,12 +4,48 @@
 }
 
 .header{
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
   height: 150px;
   background-color: #DDD;
 }
 .header h1{
+  padding-top: 4%;
+  margin: 0 auto;
   text-align: center;
 }
+.header a{
+text-decoration: none;
+color: burlywood;
+font-weight: bolder;  
+}
+.main-content{
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.news{
+  padding: 10px;
+  margin-top: 30px;
+  border: 1px solid black;
+  width:  22%;
+}
+.news .news-img{
+  padding-left: 8%; 
+  width: 90%;
+}
+.news .news-h3{
+  text-align: center;
+}
+.news .news-p{
+  padding: 5px;
+}
+.news .news-date{
+text-align: right;}
+
 
 
 
