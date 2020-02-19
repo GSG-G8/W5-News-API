@@ -20,12 +20,7 @@ app.post('/search', (req, res) => {
   const url = `http://newsapi.org/v2/everything?q=${data}&apiKey=${process.env.apiKey}`;
   fetch(url)
     .then(res => res.json())
-    .then(body => res.json(body.articles[0]));
-});
-
-app.post('/search', (req, res) => {
-  console.log('Helllo', req.body.value);
-  res.json(`hello ${req.body.value}`);
+    .then(body => res.json(body.articles));
 });
 
 app.use((err, req, res, next) => {
