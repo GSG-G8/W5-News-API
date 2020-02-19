@@ -2,7 +2,6 @@
   padding: 0;
   margin: 0;
 }
-
 .header{
   margin: 0 auto;
   width: 80%;
@@ -45,10 +44,6 @@ font-weight: bolder;
 }
 .news .news-date{
 text-align: right;}
-
-
-
-
 /* Erorr pages */
 .error {
   display: flex;
@@ -57,7 +52,6 @@ text-align: right;}
   flex-wrap: wrap;
   padding-top: 150px;
 }
-
 .error__desc {
   text-align: center;
   font-size: 1.5em;
